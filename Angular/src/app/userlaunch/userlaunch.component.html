@@ -1,0 +1,151 @@
+<nav class="bg">
+    <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Tour Of Trainers</a>
+              </div>
+              <form name="myform" class="navbar-form navbar-left" >
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="myInput" (keyup)="searchCourse()" placeholder="Search your Training">
+                  </div>
+                  <div class='input-group date' id='datetimepicker1'>
+                      <input type='text' class="form-control" placeholder="Pick your timings"/>
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                  </div>
+        
+                  <button type="submit" class="btn btn-danger navbar-btn" id="search" >Search</button>
+                </form>
+              <ul class="nav navbar-nav navbar-right">
+        
+                <li><a routerLink="/usermessage"><span class="fa fa --bell--o"></span>Notifications</a></li>
+                <li><a routerLink="/main"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+              </ul>
+            </div>
+                 
+    <div>  
+    <ul class="nav nav-pills nav-justified">
+    <li class="active"><a routerLink="/userlaunch">Search Trainings</a></li>
+    <li ><a routerLink="/current">Current Training</a></li>
+    <li><a routerLink="/completed">Trainings Completed</a></li>
+    </ul>
+    </div>
+</nav></nav>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+              <ul class="nav nav-pills nav-justified">        
+                      <li align="center"><h3 style="color: beige">Search Results</h3></li>
+              </ul>
+      </div>
+    </div>
+</nav>
+<div class="container " > 
+    <!-- <table class="table table-hover"  id="myTable" height="100"  style="background-color: rgb(226, 219, 123)">
+      <tr style="background-color: crimson">
+          <th>Profile</th>
+          <th>Trainer Name</th>
+          <th>Technology</th>
+          <th>Ratings</th>
+          <th>Trainings Completed</th>
+          <th>Propose</th>
+
+      </tr>
+      <tr>
+          <td><a routerLink="/profile1"><img src="../../assets/male.png" height="80" width="80"></a></td>
+          <td>Suryapk</td>
+          <td>Spring</td>
+          <td>4/5</td>
+          <td>3</td>
+          <td><button type="submit" class="btn btn-danger navbar-btn"  data-toggle="modal" data-target="#myModal">Propose Training</button>
+          </td>
+      </tr>
+      <tr>
+          <td><a routerLink="/profile2"><img src="../../assets/male.png" height="80" width="80"></a></td>
+          <td>Prasath</td>
+          <td>Angular</td>
+          <td>3/5</td>
+          <td>3</td>
+          <td><button type="submit" class="btn btn-danger navbar-btn"  data-toggle="modal" data-target="#myModal">Propose Training</button>
+          </td>
+      <tr>
+          <td><a routerLink="/profile3"><img src="../../assets/male.png" height="80" width="80"></a></td>
+          <td>Aravind</td>
+          <td>Jquery</td>
+          <td>4/5</td>
+          <td>3</td>
+          <td><button type="submit" class="btn btn-danger navbar-btn"  data-toggle="modal" data-target="#myModal">Propose Training</button>
+          </td>
+      </tr>  
+      <tr>
+          <td><a routerLink="/profile4"><img src="../../assets/male.png" height="80" width="80"></a></td>
+            <td>Vignesh</td>
+            <td>Java</td>
+            <td>4/5</td>
+            <td>2</td>
+            <td><button type="submit" class="btn btn-danger navbar-btn"  data-toggle="modal" data-target="#myModal">Propose Training</button>
+            </td>
+      </tr> 
+      <tr>
+          <td><a routerLink="/profile1"><img src="../../assets/male.png" height="80" width="80"></a></td>
+          <td>Surya</td>
+          <td>Python</td>
+          <td>3/5</td>
+          <td>4</td>
+          <td><button type="submit" class="btn btn-danger navbar-btn"  data-toggle="modal" data-target="#myModal">Propose Training</button>
+          </td>
+      </tr>     
+    </table>
+    </div> -->   <div class="card my-5">
+      <div class="card-body">
+        <table class="table table-hover" id="myTable" height="100"  style="background-color: rgb(226, 219, 123)" *ngIf="search1" >
+          <thead class="thead-dark">
+            <tr style="background-color: crimson">
+              <th>Profile</th>
+              <th>Mentor Name</th>
+              <th>Technology</th>
+              <th>Experience</th>
+              
+              <th>Trainings Completed</th>
+              <th>Duration</th>
+              <th>Propose</th>
+    
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let one of search1">
+              <td><a routerLink="/profile1"><img src="../../assets/male.png" height="80" width="80"></a></td>
+              <td>{{ one.mentorName }}</td>
+              <td>{{ one.technology}}</td>
+              <td>{{ one.mentorYearsExp}}</td>
+              <td>{{ one.trainings}}</td>
+              <td>120 Hours</td>
+              <td><form ><button  class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Propose Training</button></form>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div></div>
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Success!!</h4>
+          </div>
+          <div class="modal-body">
+            <p>Propose sent successfully</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        </div>
+        </div>
+</nav>
+   

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Tour Of Trainers</a>
+      </div>
+      <form name="myform" class="navbar-form navbar-left" >
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search your Training">
+          </div>
+          <div class='input-group date' id='datetimepicker1'>
+              <input type='text' class="form-control" placeholder="Pick your timings"/>
+              <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+          </div>
+
+          <button type="submit" class="btn btn-danger navbar-btn" id="search" >Search</button>
+        </form>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="/start"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li><a routerLink="/adminlogin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+
+        <li><a routerLink="/usersignup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a routerLink="/userlogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>

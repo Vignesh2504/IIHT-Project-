@@ -1,0 +1,71 @@
+      <div class="bg">
+
+      <nav class="navbar navbar-inverse">
+        <app-trainerheader></app-trainerheader> 
+
+                <div>
+                        
+                        <ul class="nav nav-pills nav-justified">
+                        
+                        <li class="active"><a routerLink="/trainercurrent">Current Training</a></li>
+                        <li><a routerLink="/trainercompleted">Trainings Completed</a></li>
+                        <li ><a routerLink="/editskills">Edit Skills</a></li>
+                      </ul>
+                    </div>
+               
+         </nav>
+         <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                      <ul class="nav nav-pills nav-justified">        
+                            <li align="center"><h3 style="color: beige">Current Trainings</h3></li>
+                        </ul>
+              </div>
+            </div>
+        </nav>  
+        <div class="card my-5">
+          <div class="card-body">
+            <table class="table table-hover" id="myTable" height="100"  style="background-color: rgb(226, 219, 123)"  >
+              <thead class="thead-dark">
+                <tr style="background-color: crimson">
+                 
+                  <th scope="col">Course Id</th>
+                  <th scope="col">Course Name</th>
+                  <th scope="col">Duration</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Fees</th>
+        
+        
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users">
+                 
+                  <td>{{ user.mentorId }}</td>
+                  <td>{{ user.technology}}</td>
+                  <td>120 Hrs</td>
+                  <td>In Progress</td>
+                  <td>Paid</td>
+        
+                </tr>
+                <tr >
+                 
+                  <td>8</td>
+                  <td>.Net</td>
+                  <td>120 Hrs</td>
+                  <td>Completed</td>
+                  <td>Pending</td>
+        
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        
+                </div>
+
+        
+         
+           
+        

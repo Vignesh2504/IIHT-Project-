@@ -1,0 +1,81 @@
+
+
+    <app-messageheader></app-messageheader>
+    <div class="bg" style="background-color: darkgray; height:660px; width:100%;position: absolute ">
+    
+        <div class="container">
+        
+            <div class="row">
+                <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 ">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-user" role="tab" aria-controls="nav-user" aria-selected="true"><h1>User</h1></a>
+
+                        </div>
+                    </nav>
+                    <div class="tab-content py-3 px-3 px-sm-0 " id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-user" role="tabpanel" aria-labelledby="nav-user-tab">
+
+                            <div class="container ">
+
+
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-6">
+                                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                            <div id="nav-user" role="tabpanel" aria-labelledby="nav-user-tab" class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+                                                <div class="card card-signin my-5 ">
+                                                    <div class="card-body ">
+                                                        <h5 class="card-title text-center">User Sign Up</h5>
+                                                        <form id="msform" class="border p-4 mb-4" [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+                                                            <h2 class="fs-title">Personal Details</h2>
+                                                            <div class="form-group">
+                                                                <input type="text" name="uname" placeholder="User Name" class="form-control" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+
+                                                                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                                                    <div *ngIf="f.username.errors.required">Firstname is required</div>
+
+                                                                </div>
+                                                            </div>
+                               
+                                                            
+              
+                                                            <div class="form-group">
+
+                                                                <input type="email" name="email" placeholder="Email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                                                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                                                    <div *ngIf="f.email.errors.required">Email is required</div>
+                                                                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="password" name="password" placeholder="Password" class="form-control" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                                                    <div *ngIf="f.password.errors.required">Password is required</div>
+                                                                    <div *ngIf="f.password.errors.minlength">Minimum length should be 8</div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+
+                                            
+                                                                <input type="submit" name="submit" class="signupbtn submit action-button btn-dark " value="Submit" style="color: white;" />
+                                                                <div><a routerLink="/trainersignup">Sign up as Trainer</a></div>
+                                                            </div>
+
+                                                        </form><br>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    </div>

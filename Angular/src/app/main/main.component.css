@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(144, 188, 194);
+}
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: rgb(113, 200, 235);
+}
+.bg{
+    background-image: url("../../assets/images/trainer.jpg");
+    background-size:cover;
+    padding-bottom: 500px;
+    
+    
+}

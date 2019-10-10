@@ -1,0 +1,13 @@
+.bg{
+    background-image: url("../../assets/images/trainer.jpg");
+    background-size:cover;
+    padding-bottom: 25%;
+}
+.welcome{
+    color: azure;
+    font-size: 100px;
+    padding-top: 170px;
+    margin-left:44%; 
+    align-content: center;
+    font-family: Verdana, Geneva, sans-serif;
+  }
